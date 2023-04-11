@@ -36,7 +36,7 @@ class PhotosController < ApplicationController
     # Parameters: {"query_image"=>"a", "query_caption"=>"b", "query_ownder_id"=>"c"}
     input_image = params.fetch("query_image")
     input_caption = params.fetch("query_caption")
-    input_owner_id = params.fetch("query_owner_id")
+    input_owner_id = params.fetch("query_owner_id", false)
 
     a_new_photo = Photo.new
 
